@@ -1,19 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-  <title>My Resume</title>
+    <title>My Resume</title>
 
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-<body>
-  <h1>My Resume</h1>
-</body>
+  <body>
+    <div class="container">
+      <div class="header-container">
+        <header>
+          <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+          </nav>
+        </header>
+      </div>
+
+      <section class="hero">
+        <img src="img/portrait.png" alt="portrait image" />
+        <h1 class="heading">Alex Gohorel</h1>
+        <h5 class="heading">Fullstack Javascript Developer</h5>
+        <hr />
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, totam.</p>
+        <a href="#" class="btn">Let's Get This Bread, Gamers</a>
+      </section>
+
+      <section class="details">
+        <div class="column-wrapper">
+          <div class="col">
+            <h2 class="heading">Listen Up...</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus delectus labore
+              quae aspernatur, exercitationem molestiae maiores recusandae sint vitae ipsa porro
+              doloremque quo a incidunt ratione temporibus eum accusantium quasi.
+            </p>
+          </div>
+          <div class="col">
+            <h3 class="heading">Skills</h3>
+            <table>
+              <tr>
+                <td>web development</td>
+              </tr>
+              <tr>
+                <td>creative coding</td>
+              </tr>
+              <tr>
+                <td>graphic design</td>
+              </tr>
+              <tr>
+                <td>audio production</td>
+              </tr>
+              <tr>
+                <td>Sound Design</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="heading">Work History</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Yrs</th>
+                <th>Company</th>
+                <th>Title</th>
+                <th>Tech Used</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Apple</td>
+                <td>Software Engineer</td>
+                <td>Swift</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Microsoft</td>
+                <td>Computer Scientist</td>
+                <td>.NET</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Amazon</td>
+                <td>Dev Ops</td>
+                <td>AWS</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer>
+        <p>Copyright Dr. Steve Brule 2019</p>
+      </footer>
+    </div>
+  </body>
 </html>
