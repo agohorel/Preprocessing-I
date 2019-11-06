@@ -142,7 +142,7 @@ body {
   font-size: 62.5%;
 }
 
-// begin my code
+// variables
 
 @font-primary: "Roboto Mono", mono-space;
 @font-heading: "Roboto", sans-serif;
@@ -154,11 +154,39 @@ body {
 @size-default-font: 1.6rem;
 @size-border-radius: 3px;
 
+// mixins
+
+.flex-between() {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-spacing() {
+  margin-bottom: 2.5vh;
+}
+
+.shadow(@h-offset, @v-offset, @blur) {
+  box-shadow: @h-offset @v-offset @blur rgba(0, 0, 0, 0.2);
+}
+
 .container {
-  max-width: 95%;
+  width: 50%;
   margin: 0 auto;
   font-family: @font-primary;
   font-size: @size-default-font;
+  transition: 0.2s ease-in-out width;
+
+  @media (max-width: 1280px) {
+    width: 67%;
+  }
+
+  @media (max-width: 900px) {
+    width: 80%;
+  }
+
+  @media (max-width: 500px) {
+    width: 90%;
+  }
 
   .heading {
     font-family: @font-heading;
@@ -171,11 +199,18 @@ body {
     padding-top: 2.5vh;
 
     header {
-      width: 40%;
+      width: 50%;
+
+      @media (max-width: 700px) {
+        width: 75%;
+      }
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
 
       nav {
-        display: flex;
-        justify-content: space-between;
+        .flex-between();
 
         a {
           text-decoration: none;
@@ -192,8 +227,16 @@ body {
 
   .hero {
     background-color: @color-lightgrey;
-	padding: 5%;
-	margin-top: 2.5vh;
+    padding: 5%;
+    margin-top: 2.5vh;
+    .shadow(0px, 3px, 6px);
+
+    img {
+      border-radius: 50%;
+      width: 50%;
+      max-width: 300px;
+      .bottom-spacing();
+    }
 
     h1 {
       font-size: 4rem;
@@ -220,24 +263,36 @@ body {
   }
 
   .details {
-	margin-top: 5vh;
+    margin-top: 2.5vh;
 
     .column-wrapper {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .col-lg {
-	  width: 60%;
-	  padding-right: 2.5vw;
+      .flex-between();
+	  .bottom-spacing();
 	  
-	  p {
-		  line-height: 1.5;
+	  @media (max-width:500px){
+		  flex-direction: column;
+
+		  .col-lg {
+			  width: 100%;
+		  }
+
+		  .col-sm {
+			  width: 100%;
+		  }
 	  }
     }
 
+    .col-lg {
+      width: 70%;
+      padding-right: 2.5vw;
+
+      p {
+        line-height: 1.5;
+      }
+    }
+
     .col-sm {
-      width: 40%;
+      width: 30%;
       text-align: center;
 
       table {
@@ -246,31 +301,113 @@ body {
     }
 
     .heading {
-	  font-size: 3rem;
-	  margin-bottom: 1.25vh;
+      font-size: 3rem;
+      margin-bottom: 1.25vh;
     }
 
     thead,
     th,
     td {
-      border: 1px solid grey;
       padding: 10px;
+    }
+
+    tr:nth-of-type(even) {
+      background-color: lighten(@color-lightgrey, 15%);
+    }
+
+    tr:nth-of-type(odd) {
+      background-color: @color-lightgrey;
     }
   }
 
   .history {
-	
-	table {
-		width: 100%;
-		text-align: center;
-	}
+    table {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 5vh;
+    }
+
+    thead {
+      border: 1px solid rgba(200, 200, 200, 0.75);
+    }
+
+    th {
+      background-color: white;
+      font-weight: bold;
+      font-family: @font-heading;
+    }
   }
 
   footer {
-	  background-color: @color-midgrey;
-	  color: white;
-	  text-align: center;
-	  padding: 20px;
-	  margin-top: 2.5vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: @color-midgrey;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 2.5vh;
+    .shadow(0, -6px, 5px);
+    font-size: 1.2rem;
+    font-family: @font-heading;
+    color: @color-lightgrey;
+  }
+
+  //CONTACT
+
+  .contact {
+
+    .contact-wrapper {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  margin-top: 10vh;
+	  
+	  h1 {
+		  font-size: 4rem;
+		  .bottom-spacing();
+	  }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin-bottom: 140px;
+        transition: 0.3s ease-in-out all;
+
+        @media (max-width: 850px) {
+          width: 75%;
+        }
+
+        @media (max-width: 500px) {
+          width: 100%;
+        }
+
+        label {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+          background: #ccc;
+          border: none;
+          padding: 5px;
+          margin-bottom: 20px;
+        }
+
+        input:last-of-type {
+          width: 34%;
+          transition: 0.2s ease-out all;
+        }
+
+        input:last-of-type:hover {
+          cursor: pointer;
+          background: black;
+          color: white;
+        }
+      }
+    }
   }
 }
