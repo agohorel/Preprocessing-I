@@ -267,19 +267,19 @@ body {
 
     .column-wrapper {
       .flex-between();
-	  .bottom-spacing();
-	  
-	  @media (max-width:500px){
-		  flex-direction: column;
+      .bottom-spacing();
 
-		  .col-lg {
-			  width: 100%;
-		  }
+      @media (max-width: 500px) {
+        flex-direction: column;
 
-		  .col-sm {
-			  width: 100%;
-		  }
-	  }
+        .col-lg {
+          width: 100%;
+        }
+
+        .col-sm {
+          width: 100%;
+        }
+      }
     }
 
     .col-lg {
@@ -288,6 +288,7 @@ body {
 
       p {
         line-height: 1.5;
+        background-color: rgba(255, 255, 255, .5);
       }
     }
 
@@ -357,17 +358,16 @@ body {
   //CONTACT
 
   .contact {
-
     .contact-wrapper {
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	  margin-top: 10vh;
-	  
-	  h1 {
-		  font-size: 4rem;
-		  .bottom-spacing();
-	  }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10vh;
+
+      h1 {
+        font-size: 4rem;
+        .bottom-spacing();
+      }
 
       .contact-form {
         display: flex;
@@ -408,6 +408,27 @@ body {
           color: white;
         }
       }
+    }
+  }
+}
+
+.p5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+
+  #p5-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    & canvas {
+      width: 100% !important;
+      height: auto !important;
     }
   }
 }
