@@ -1,19 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <title>My Resume</title>
+    <title>Alex Gohorel - Resume</title>
 
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-<body>
-  <h1>My Resume</h1>
-</body>
+  <body>
+    <div class="p5">
+      <div id="p5-container">
+        <!-- p5 canvas goes here -->
+      </div>
+    </div>
+    <div class="container">
+      <div class="header-container">
+        <header>
+          <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="https://agohorel.github.io/portfolio-website/" target="_blank">Portfolio</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </header>
+      </div>
+
+      <section class="hero">
+        <img src="img/portrait.png" alt="portrait image" />
+        <h1 class="heading">Alex Gohorel</h1>
+        <h5 class="heading">Fullstack Javascript Developer</h5>
+        <hr />
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, totam.</p>
+        <a href="contact.html" class="btn">Let's Git It</a>
+      </section>
+
+      <section class="details">
+        <div class="column-wrapper">
+          <div class="col-lg">
+            <h2 class="heading">About Me</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quae neque nam
+              commodi illum amet, ducimus veritatis assumenda repudiandae eaque totam a tenetur
+              recusandae aut deserunt magni eos. Quibusdam eligendi soluta labore reprehenderit,
+              eaque nihil quos sit doloribus nam quidem dolor eius voluptatum illum, numquam debitis
+              odio autem facere vero.
+            </p>
+          </div>
+          <div class="col-sm">
+            <h3 class="heading">Skills</h3>
+            <table>
+              <tr>
+                <td>Node.js</td>
+              </tr>
+              <tr>
+                <td>React</td>
+              </tr>
+              <tr>
+                <td>Electron</td>
+              </tr>
+              <tr>
+                <td>Redux</td>
+              </tr>
+              <tr>
+                <td>Mongodb</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="history">
+          <h3 class="heading">Work History</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Yrs</th>
+                <th>Company</th>
+                <th>Title</th>
+                <th>Tech Used</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>glitch.cool</td>
+                <td>Software Engineer</td>
+                <td>Node, Electron, Gatsby</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>a l e p h</td>
+                <td>Lead Developer</td>
+                <td>Node, Electron, p5.js</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Outlier Recordings</td>
+                <td>Graphic Designer</td>
+                <td>Adobe Suite</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer>
+        <p>Copyright Alex Gohorel 2019</p>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="vectors.js"></script>
+  </body>
 </html>
